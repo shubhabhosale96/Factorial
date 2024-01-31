@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>Factorial Number</title>
+</head>
+<body>
+    <h1>Find Factorial:</h1>
+    Enter the Number: <input type="text" id="InputNumber">
+    <button onclick="calculateFactorial()">Calculate Factorial</button>
+    <p id="result"></p>
+    <script>
+        function calculateFactorial(){
+            var NumInput = document.getElementById("InputNumber").value;
+            var num=parseInt(NumInput);
+            if(num<0)
+            {
+                document.getElementById("result").innerHTML="Invalid input. Please enter a positive number."
+            }else{
+                var result=1;
+                for(var i=1; i<=num; i++){
+                    result=result*i;
+                }
+                document.getElementById("result").innerHTML="The factorial of" + num + "is" + result + ".";
+            }
+        }
+    </script>
+    </body>
+    </html>
